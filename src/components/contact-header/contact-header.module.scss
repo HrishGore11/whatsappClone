@@ -1,0 +1,28 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #202c33;
+
+  .image_container {
+    // width: 100%;
+    height: auto;
+    margin-right: 16px;
+  }
+
+  .contact_container {
+    display: flex;
+    flex-direction: column;
+    // flex-grow: 1;
+
+    .contact_name {
+      font-size: 16px;
+    }
+    .last_seen {
+      font-size: 12px;
+      color: #ffffff99;
+      margin-top: 5px;
+    }
+  }
+}

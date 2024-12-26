@@ -1,0 +1,36 @@
+.message_container {
+  display: flex;
+  align-items: center;
+  background-color: #202c33;
+  padding: 5px 16px;
+
+  .plus_icon {
+    width: 30px;
+    height: 30px;
+    color: #d1d7db;
+  }
+  .input {
+    background-color: #2a3942;
+    border: none;
+    margin: 5px 8px;
+    border-radius: 8px;
+    padding: 9px 12px;
+    width: 95%;
+  }
+  .input:focus-visible {
+    border-color: transparent;
+    outline: none;
+  }
+  .mic_icon {
+    width: 30px;
+    height: 30px;
+    color: #d1d7db;
+    cursor: pointer;
+  }
+  .send_icon {
+    width: 30px;
+    height: 30px;
+    color: #d1d7db;
+    cursor: pointer;
+  }
+}
