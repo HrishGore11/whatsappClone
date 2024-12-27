@@ -1,0 +1,26 @@
+.container {
+  padding: 0 16px;
+  background-color: #111b21;
+  color: #e9edef;
+  .header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 10px;
+    align-items: center;
+    .header {
+      // padding-left: 16px;
+      // padding-right: 10px;
+      text-align: left;
+      font-size: 22px;
+      //   display: flex;
+    }
+    .menu_icon {
+      width: 25px;
+      height: 25px;
+      color: #d1d7db;
+      cursor: pointer;
+    }
+  }
+  .contact_list {
+  }
+}

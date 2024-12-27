@@ -1,0 +1,37 @@
+.message_container {
+  padding: 12px 0px;
+
+  .message_div {
+    display: flex;
+    padding: 0px 63px;
+    margin-bottom: 12px;
+  }
+  .message_div_in {
+    justify-content: flex-start;
+  }
+  .message_div_out {
+    justify-content: flex-end;
+  }
+  .message {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    .message_text {
+      font-size: 14px;
+    }
+    .message_time {
+      vertical-align: baseline;
+      font-size: 11px;
+      color: #ffffff99;
+      text-align: end;
+    }
+  }
+  .message_in {
+    background-color: #202c33;
+  }
+  .message_out {
+    background-color: #005c4b;
+  }
+}

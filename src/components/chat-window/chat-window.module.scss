@@ -1,0 +1,8 @@
+.container {
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  overflow-y: hidden;
+  .chat_container {
+    overflow-y: scroll;
+  }
+}
