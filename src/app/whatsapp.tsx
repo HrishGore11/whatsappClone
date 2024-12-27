@@ -12,19 +12,35 @@ import useInstantDB from "@/hooks/useInstantDB";
 
 const Whatsapp = () => {
   const { addContact, fetchContacts } = useInstantDB();
-  useEffect(() => {
-    addContact({
-      name: "Bob Johnson",
-      avatar: "https://example.com/avatar3.png",
-    });
-  }, []);
+
   const { isContactsLoading, contacts } = fetchContacts();
-  console.log("loadingContacts", isContactsLoading, contacts);
+
+  useEffect(() => {
+    handleContacts();
+  }, [isContactsLoading, contacts?.contacts]);
+
+  const handleContacts = async () => {
+    if (!isContactsLoading) {
+      if (contacts && contacts?.contacts?.length > 0) {
+        dispatch({ type: "SET_CONTACTS", payload: contacts?.contacts });
+      } else {
+        try {
+          await addContact({
+            name: "Bob Johnson",
+            avatar: "https://i.pravatar.cc/300?img=5",
+          }); // Add contact to the database
+          console.log("Default contact added and dispatched.");
+        } catch (error) {
+          console.error("Error adding default contact:", error);
+        }
+      }
+    }
+  };
+
   const [state, dispatch] = useReducer(
     WhatsappReducer,
     initialWhatsappStateValue
   );
-  console.log(state);
   return (
     <WhatsaAppStateProvider state={state}>
       <WhatsAppDispatchProvider dispatch={dispatch}>

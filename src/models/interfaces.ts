@@ -4,6 +4,8 @@ export interface IContact {
   avatar: string;
   lastMessage?: string;
   lastMessageTime?: string;
+  createdAt?: string;
+  updatedAt?: string;
   lastActive?: string;
 }
 
@@ -11,7 +13,8 @@ export interface IMessage {
   id: string;
   contactId: number;
   text: string;
-  sender: number;
-  timestamp: string;
+  senderId: string;
+  createdAt: string;
+  updatedAt?: string;
   status: string;
 }

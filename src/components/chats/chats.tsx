@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./chats.module.scss";
 import { format } from "date-fns";
+import { userId } from "@/constants/constants";
 interface IChatsProps {
   messages: any;
 }
@@ -9,11 +10,11 @@ const Chats = (props: IChatsProps) => {
   return (
     <div className={styles.message_container}>
       {messages?.length > 0 &&
-        messages?.map((message) => (
+        messages?.map((message: any) => (
           <div
             key={message.id}
             className={`${styles.message_div} ${
-              message.sender === 1
+              message.sender === userId
                 ? styles.message_div_in
                 : styles.message_div_out
             }`}
@@ -23,9 +24,9 @@ const Chats = (props: IChatsProps) => {
                 message.sender === 1 ? styles.message_in : styles.message_out
               }`}
             >
-              <p className={styles.message_text}>{message.text}</p>
+              <p className={styles.message_text}>{message?.text}</p>
               <small className={styles.message_time}>
-                {format(new Date(message.timestamp), "hh:mm a")}
+                {format(new Date(message?.createdAt), "hh:mm a")}
               </small>
             </div>
           </div>

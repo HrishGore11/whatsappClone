@@ -16,9 +16,9 @@ const ContactHeader = (props: IContactHeaderProps) => {
           alt="contact image"
           height={40}
           width={40}
-          src={"/vercel.svg"}
-          // className={styles.avtar_image}
-        ></Image>
+          src={contact?.avatar || "/vercel.svg"}
+          className={styles.avtar_image}
+        />
       </div>
       <div className={styles.contact_container}>
         <div className={styles.contact_name}>{contact?.name}</div>

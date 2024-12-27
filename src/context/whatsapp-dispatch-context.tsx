@@ -1,5 +1,5 @@
+import { IWhatsaAppReducerAction } from "@/utils/whatsapp-reducer";
 import { Dispatch, ReactNode, createContext, useContext } from "react";
-import { IWhatsaAppReducerAction } from "../flights-trip-summary-reducer";
 
 export const IWhatsaAppDisptachContext =
   createContext<Dispatch<IWhatsaAppReducerAction> | null>(null);

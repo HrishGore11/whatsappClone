@@ -21,7 +21,7 @@ const Contact = (props: IContactProps) => {
             alt="contact image"
             height={40}
             width={40}
-            src={"/vercel.svg"}
+            src={contactInfo?.avatar || "/vercel.svg"}
             className={styles.avtar_image}
           ></Image>
         </div>

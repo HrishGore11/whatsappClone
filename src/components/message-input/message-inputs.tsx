@@ -13,7 +13,7 @@ const MessageInput = (props: IMessageInputProps) => {
     setMessage("");
   };
 
-  const handleMessageChange = (event) => {
+  const handleMessageChange = (event: any) => {
     setMessage(event?.target?.value);
   };
 
