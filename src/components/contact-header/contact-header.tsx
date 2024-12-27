@@ -22,9 +22,9 @@ const ContactHeader = (props: IContactHeaderProps) => {
       </div>
       <div className={styles.contact_container}>
         <div className={styles.contact_name}>{contact?.name}</div>
-        {contact?.lastActive && (
+        {contact?.lastMessageTime && (
           <div className={styles.last_seen}>
-            last Active {lastSeen(contact?.lastActive)}
+            last Active {lastSeen(contact?.lastMessageTime)}
           </div>
         )}
       </div>

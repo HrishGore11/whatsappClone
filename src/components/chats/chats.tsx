@@ -14,14 +14,16 @@ const Chats = (props: IChatsProps) => {
           <div
             key={message.id}
             className={`${styles.message_div} ${
-              message.sender === userId
-                ? styles.message_div_in
-                : styles.message_div_out
+              message?.senderId === userId
+                ? styles.message_div_out
+                : styles.message_div_in
             }`}
           >
             <div
               className={`${styles.message} ${
-                message.sender === 1 ? styles.message_in : styles.message_out
+                message?.senderId === userId
+                  ? styles.message_out
+                  : styles.message_in
               }`}
             >
               <p className={styles.message_text}>{message?.text}</p>
