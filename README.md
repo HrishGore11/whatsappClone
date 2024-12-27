@@ -1,5 +1,10 @@
 # WhatsApp Web-like Application with IndexedDB and InstantDB
 
+Live app:
+
+1. 'https://whatsapp-clone-nine-rho.vercel.app/'
+2. 'https://whatsapp-clone-git-main-hrishgore11s-projects.vercel.app/'
+
 ## Overview
 
 This project implements a WhatsApp Web-like application with the following features:
